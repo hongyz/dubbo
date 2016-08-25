@@ -290,7 +290,7 @@ public final class ClassGenerator
 	}
 
 	public Class<?> toClass(){
-		return toClass(getClass().getClassLoader(), getClass().getProtectionDomain());
+		return toClass(Thread.currentThread().getContextClassLoader(), null);
 	}
 
 	public Class<?> toClass(ClassLoader loader, ProtectionDomain pd)
