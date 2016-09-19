@@ -34,7 +34,7 @@ public class JavaObjectInput extends NativeJavaObjectInput
 
 	public JavaObjectInput(InputStream is) throws IOException
 	{
-		super(new ObjectInputStream(is));
+		super(new ClassLoaderObjectInputStream(is));
 	}
 
 	public JavaObjectInput(InputStream is, boolean compacted) throws IOException
